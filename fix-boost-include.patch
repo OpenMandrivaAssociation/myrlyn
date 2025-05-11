@@ -1,0 +1,12 @@
+diff -uraN myrlyn-0.9.4/src/YQPkgHistoryDialog.cc omv-myrlyn-0.9.4/src/YQPkgHistoryDialog.cc
+--- myrlyn-0.9.4/src/YQPkgHistoryDialog.cc	2025-05-11 13:47:40.000000000 +0200
++++ omv-myrlyn-0.9.4/src/YQPkgHistoryDialog.cc	2025-05-11 14:43:47.188499648 +0200
+@@ -14,7 +14,7 @@
+     Textdomain "qt-pkg"
+  */
+ 
+-
++#include <boost/ref.hpp>
+ #include <QBoxLayout>
+ #include <QEventLoop>
+ #include <QHBoxLayout>
