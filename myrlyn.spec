@@ -5,7 +5,8 @@ Summary:        Myrlyn package manager GUI for Linux
 License:        GPL-2.0-only
 Group:          System/Packages
 URL:            https://github.com/shundhammer/myrlyn
-Source:         https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:         https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
+Patch0:         fix-boost-include.patch
 BuildRequires:  pkgconfig(libzypp) >= 17.21.0
 BuildRequires:  imagemagick
 BuildRequires:  boost-devel
@@ -17,7 +18,7 @@ BuildRequires:  pkgconfig(Qt6Gui)
 BuildRequires:  pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
 Requires: lib64Qt6Svg
-Requires:	xdg-utils
+Requires: xdg-utils
 Requires: zypper
 
 %description
