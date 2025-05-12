@@ -1,21 +1,21 @@
-From 49c0a74c1cf0efb9e1eb9e0ae33058ec7e63d968 Mon Sep 17 00:00:00 2001
-From: Stefan Hundhammer <Stefan.Hundhammer@gmx.de>
-Date: Sun, 11 May 2025 16:26:10 +0200
-Subject: [PATCH] Include <boost/ref.hpp> (Closes #92)
-
----
- src/YQPkgHistoryDialog.cc | 1 +
- 1 file changed, 1 insertion(+)
-
-diff --git a/src/YQPkgHistoryDialog.cc b/src/YQPkgHistoryDialog.cc
-index dd63a6d..967ec9c 100644
---- a/src/YQPkgHistoryDialog.cc
-+++ b/src/YQPkgHistoryDialog.cc
-@@ -26,6 +26,7 @@
- #include <QSplitter>
- #include <QTreeWidget>
+diff -uraN myrlyn-0.9.4/src/YQPkgHistoryDialog.cc omv-myrlyn-0.9.4/src/YQPkgHistoryDialog.cc
+--- myrlyn-0.9.4/src/YQPkgHistoryDialog.cc	2025-05-11 13:47:40.000000000 +0200
++++ omv-myrlyn-0.9.4/src/YQPkgHistoryDialog.cc	2025-05-12 12:03:10.208812721 +0200
+@@ -14,7 +14,7 @@
+     Textdomain "qt-pkg"
+  */
  
+-
 +#include <boost/ref.hpp>
- #include <zypp-core/Date.h>
- #include <zypp-core/Pathname.h>
- #include <zypp-core/Url.h>
+ #include <QBoxLayout>
+ #include <QEventLoop>
+ #include <QHBoxLayout>
+@@ -160,7 +160,7 @@
+     YQPkgHistoryItemCollector itemCollector( _datesTree, _actionsTree );
+     zypp::parser::HistoryLogReader reader( FILENAME,
+                                            zypp::parser::HistoryLogReader::Options(),
+-                                           boost::ref( itemCollector ) );
++                                           itemCollector );
+     try
+     {
+ 	reader.readAll();
