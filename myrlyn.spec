@@ -1,11 +1,11 @@
 Name:           myrlyn
-Version:        0.9.4
+Version:        0.9.9
 Release:        1
 Summary:        Myrlyn package manager GUI for Linux 
 License:        GPL-2.0-only
 Group:          System/Packages
 URL:            https://github.com/shundhammer/myrlyn
-Source:         https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(libzypp) >= 17.21.0
 BuildRequires:  imagemagick
 BuildRequires:  boost-devel
