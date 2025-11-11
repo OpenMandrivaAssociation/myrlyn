@@ -16,7 +16,7 @@ BuildRequires:  pkgconfig(Qt6Core) >= 6.5
 BuildRequires:  pkgconfig(Qt6Gui)
 BuildRequires:  pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
-Requires: lib64Qt6Svg
+Requires: %{_lib}Qt6Svg
 Requires:	xdg-utils
 Requires: zypper
 
