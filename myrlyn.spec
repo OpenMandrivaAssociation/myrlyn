@@ -1,6 +1,6 @@
 Name:           myrlyn
 Version:        0.9.4
-Release:        2
+Release:        3
 Summary:        Myrlyn package manager GUI for Linux 
 License:        GPL-2.0-only
 Group:          System/Packages
