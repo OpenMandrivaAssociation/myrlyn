@@ -9,6 +9,7 @@ Source:         https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}
 BuildRequires:  pkgconfig(libzypp) >= 17.21.0
 BuildRequires:  imagemagick
 BuildRequires:  boost-devel
+BuildRequires:  make
 BuildRequires:  cmake >= 3.17
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
