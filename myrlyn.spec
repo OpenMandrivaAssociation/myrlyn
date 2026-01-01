@@ -1,11 +1,11 @@
 Name:           myrlyn
-Version:        0.9.4
-Release:        3
+Version:        0.9.9
+Release:        1
 Summary:        Myrlyn package manager GUI for Linux 
 License:        GPL-2.0-only
 Group:          System/Packages
 URL:            https://github.com/shundhammer/myrlyn
-Source:         https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/shundhammer/myrlyn/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(libzypp) >= 17.21.0
 BuildRequires:  imagemagick
 BuildRequires:  boost-devel
@@ -17,7 +17,7 @@ BuildRequires:  pkgconfig(Qt6Core) >= 6.5
 BuildRequires:  pkgconfig(Qt6Gui)
 BuildRequires:  pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
-Requires: lib64Qt6Svg
+Requires: %{_lib}Qt6Svg
 Requires:	xdg-utils
 Requires: zypper
 
@@ -41,5 +41,7 @@ It uses libzypp as its backend and Qt as its GUI toolkit.
 %doc README.md
 %license LICENSE
 %{_bindir}/myrlyn
+%{_bindir}/myrlyn-askpass
+%{_bindir}/myrlyn-sudo
 %{_datadir}/applications/%{name}-*.desktop
 %{_datadir}/icons/hicolor/*/apps/Myrlyn.png
