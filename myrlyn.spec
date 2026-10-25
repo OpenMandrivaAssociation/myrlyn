@@ -44,4 +44,4 @@ It uses libzypp as its backend and Qt as its GUI toolkit.
 %{_bindir}/myrlyn-askpass
 %{_bindir}/myrlyn-sudo
 %{_datadir}/applications/%{name}-*.desktop
-%{_datadir}/icons/hicolor/*/apps/Myrlyn.png
+#{_datadir}/icons/hicolor/*/apps/Myrlyn.png
